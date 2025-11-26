@@ -15,8 +15,6 @@ require_once PAGE_THEME_DIR . "lib/functions/random-images.php";
 require_once PAGE_THEME_DIR . "lib/functions/image-optimization.php";
 // require_once(PAGE_THEME_DIR . 'lib/functions/required-plugins.php');
 
-
-
 // Enable SVG support in WordPress
 add_filter("upload_mimes", "ercoding_svg_support");
 /**
@@ -223,8 +221,12 @@ function restrict_blocks_page_access()
     $current_domain = $_SERVER["HTTP_HOST"];
     $current_url = $_SERVER["REQUEST_URI"];
 
-    // if the URL contains 'blocks' and the domain does NOT contain 'ercoding'
-    if (strpos($current_url, "blocks") !== false && strpos($current_domain, "ercoding") === false) {
+    // if the URL contains 'blocks' and the domain does NOT contain 'ercoding' or 'local'
+    if (
+        strpos($current_url, "blocks") !== false &&
+        strpos($current_domain, "ercoding") === false &&
+        strpos($current_domain, "local") === false
+    ) {
         wp_redirect(home_url());
         exit();
     }

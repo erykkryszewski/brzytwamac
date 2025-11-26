@@ -10,9 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (body.classList.contains("admin-bar")) {
         main.style.minHeight = "calc(100vh - " + footerHeightWithAdminBar + "px)";
-        main.style.paddingTop = headerHeight + "px";
     } else {
         main.style.minHeight = "calc(100vh - " + footerHeight + "px)";
+    }
+
+    if (body.classList.contains("theme-frontpage")) {
+        main.style.paddingTop = "0";
+    } else {
         main.style.paddingTop = headerHeight + "px";
     }
 });

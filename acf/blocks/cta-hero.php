@@ -56,6 +56,7 @@ $hero_cta_button = get_field("hero_cta_button");
             <?php endforeach; ?>
         </div>
     </div>
+    <?php if (!empty($hero_cta_title)): ?>
     <div class="container">
         <div class="button-banner cta-hero__button-banner">
             <div class="button-banner__wrapper">
@@ -77,6 +78,7 @@ $hero_cta_button = get_field("hero_cta_button");
             </div>
         </div>
     </div>
+    <?php endif;?>
 </div>
 <?php endif; ?> <?php if (!is_front_page()): ?>
 <div id="subpage-hero-scroll-to"></div>

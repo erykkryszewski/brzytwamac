@@ -13,19 +13,27 @@
     }
 
     &__logo {
-        width: 250px;
+        width: 150px;
         flex-shrink: 0;
         position: relative;
         transition: all 250ms ease;
+
+        @media (width <= 991px) {
+            position: static;
+        }
 
         img,
         svg {
             max-width: 100%;
             height: auto;
+            filter: brightness(0) invert(1);
         }
 
-        @media (width <= 991px) {
-            position: static;
+        &--subpage {
+            img,
+            svg {
+                filter: none;
+            }
         }
     }
 
@@ -107,6 +115,24 @@
         justify-content: flex-end;
         gap: 10px;
 
+        @media (width >= 1200px) {
+            transition: all 350ms ease-in-out;
+        }
+
+        @media (width <= 1199px) {
+            flex-direction: column;
+            background: $white;
+            color: $text-color;
+            position: absolute;
+            top: calc(100% - 2px);
+            display: none;
+            z-index: 10;
+            left: -15px;
+            width: calc(100% + 30px);
+            padding: 25px 0 30px;
+            height: calc(100dvh - 178px);
+        }
+
         > li {
             margin: 0;
             position: relative;
@@ -116,11 +142,12 @@
             }
 
             > a {
-                font-size: 17px;
+                font-size: 19px;
                 font-weight: 500;
                 padding: 5px;
-                color: $text-color;
+                color: $white;
                 transition: all 300ms ease;
+                text-transform: uppercase;
 
                 &::before {
                     content: "";
@@ -128,7 +155,7 @@
                     height: 2px;
                     left: 5px;
                     bottom: 0;
-                    background: $theme-color2;
+                    background: $white;
                     display: block;
                     position: absolute;
                     transition: all 300ms ease;
@@ -141,7 +168,7 @@
                 }
 
                 &:hover {
-                    color: $theme-color2;
+                    color: $white;
 
                     &::before {
                         transform: scale(1, 1);
@@ -236,22 +263,16 @@
             }
         }
 
-        @media (width >= 1200px) {
-            transition: all 350ms ease-in-out;
-        }
+        &--subpage {
+            > li {
+                > a {
+                    color: $text-color;
 
-        @media (width <= 1199px) {
-            flex-direction: column;
-            background: $white;
-            color: $text-color;
-            position: absolute;
-            top: calc(100% - 2px);
-            display: none;
-            z-index: 10;
-            left: -15px;
-            width: calc(100% + 30px);
-            padding: 25px 0 30px;
-            height: calc(100dvh - 178px);
+                    &::before {
+                        background: $text-color;
+                    }
+                }
+            }
         }
     }
 

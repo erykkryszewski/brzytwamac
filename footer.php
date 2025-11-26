@@ -34,7 +34,7 @@ $footer_third_column_content = get_field("footer_third_column_content", "options
                     <div class="row">
                         <div class="col-12 col-lg-4">
                             <div class="footer__column">
-                                <a href="/" class="footer__logo mb-4"><?php if(!empty($global_logo)) { echo wp_get_attachment_image($global_logo, 'full', '', ["class" => ""]); } else { echo 'Logo'; } ?></a>
+                                <h3>Kontakt</h3>
                                 <?php if(!empty($global_phone_number)):?>
                                 <a href="tel:<?php echo esc_html($global_phone_number);?>" class="footer__phone ercodingtheme-phone-number">Tel: <?php echo esc_html($global_phone_number);?></a>
                                 <?php endif;?> <?php if(!empty($global_email)):?>
