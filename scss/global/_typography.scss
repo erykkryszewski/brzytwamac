@@ -13,13 +13,13 @@ h1 > b,
 h1 > span {
     color: $text-color;
     font-family: $font-primary;
-    font-size: 60px;
-    line-height: 1.1;
-    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 400;
     text-transform: uppercase;
 
     @media (width <= 767px) {
-        font-size: 58px;
+        font-size: 38px;
     }
 }
 
@@ -32,7 +32,7 @@ h2 > span {
     font-family: $font-primary;
     font-size: 35px;
     line-height: 1.1;
-    font-weight: 700;
+    font-weight: 600;
 
     @media (width <= 1199px) {
         font-size: 30px;
@@ -48,7 +48,7 @@ h3 > span {
     font-family: $font-primary;
     font-size: 26px;
     line-height: 1.1;
-    font-weight: 700;
+    font-weight: 600;
 
     @media (width <= 1199px) {
         font-size: 22px;

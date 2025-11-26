@@ -1,153 +1,154 @@
 /* woocommerce custom filtration */
 
 .woocommerce-ordering {
-  margin: 0 0 30px;
-  max-width: 200px;
+    margin: 0 0 30px;
+    max-width: 200px;
 }
 
 .product-filters {
-  margin: 30px 0 0;
-  position: relative;
+    margin: 30px 0 0;
+    position: relative;
 
-  @media(max-width: 1270px) {
-    margin: 30px 0;
-    max-width: calc(100% - 40px);
-  }
-  
-  form {
-    position: absolute;
-    top: 0;
-    
-    @media(max-width: 1270px) {
-      position: static;
+    @media (width <= 1270px) {
+        margin: 30px 0;
+        max-width: calc(100% - 40px);
     }
 
-    > ul {
-      display: flex;
-      width: 100%;
-      justify-content: flex-start;
-      flex-direction: column;
-      gap: 20px;
+    form {
+        position: absolute;
+        top: 0;
 
-      @media(max-width: 1270px) {
-        flex-direction: row;
-      }
-
-      @media(max-width: 767px) {
-        flex-wrap: wrap;
-      }
-
-      @media(max-width: 565px) {
-        flex-direction: column;
-        gap: 30px;
-      }
-
-      li {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-
-        h4 {
-          padding: 0;
-          margin: 0 0 10px;
-
-          @media(max-width: 1270px) {
-            margin: -5px 0 0;
-          }
-
-          @media(max-width: 565px) {
-            margin: 5px 0 0;
-          }
+        @media (width <= 1270px) {
+            position: static;
         }
 
-        label {
-          @extend .paragraph;
-          font-size: 15px;
-          margin: -4px 0 0;
-          position: relative;
-          top: 0px;
-          font-weight: 500;
-        }
-
-        input, select {
-          background: transparent !important;
-          border-radius: 20px !important;
-        }
-
-        select {
-          option {
-            background: transparent !important;
-          }
-        }
-
-        &:first-child {
-          margin: 0;
-        }
-
-        // search li
-        &.sf-field-search {
-          @media(max-width: 767px) {
-            order: 1;
-            width: calc(50% - 10px);
-          }
-        }
-
-        // cat li
-        &.sf-field-taxonomy-product_cat {
-          @media(max-width: 767px) {
-            order: 3;
-            width: 100%;
-          }
-        }
-
-        // price
-        &.sf-field-post-meta-_price {
-          @media(max-width: 767px) {
-            order: 2;
-            width: calc(50% - 10px);
-          }
-        }
-
-        ul {
-          display: flex;
-          flex-direction: column;
-          gap: 7px;
-          margin: 15px 0 0;
-          
-          @media(max-width: 1270px) {
-            margin: -8px 0 0;
-          }
-
-          li {
-            max-width: 300px;
+        > ul {
             display: flex;
-            align-items: flex-start;
+            width: 100%;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 20px;
 
-            &.sf-item-179 {
-              display: none;
+            @media (width <= 1270px) {
+                flex-direction: row;
             }
-          }
+
+            @media (width <= 767px) {
+                flex-wrap: wrap;
+            }
+
+            @media (width <= 565px) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            li {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+
+                h4 {
+                    padding: 0;
+                    margin: 0 0 10px;
+
+                    @media (width <= 1270px) {
+                        margin: -5px 0 0;
+                    }
+
+                    @media (width <= 565px) {
+                        margin: 5px 0 0;
+                    }
+                }
+
+                label {
+                    @extend .paragraph;
+                    font-size: 15px;
+                    margin: -4px 0 0;
+                    position: relative;
+                    top: 0;
+                    font-weight: 500;
+                }
+
+                input,
+                select {
+                    background: transparent !important;
+                    border-radius: 0;
+                }
+
+                select {
+                    option {
+                        background: transparent !important;
+                    }
+                }
+
+                &:first-child {
+                    margin: 0;
+                }
+
+                // search li
+                &.sf-field-search {
+                    @media (width <= 767px) {
+                        order: 1;
+                        width: calc(50% - 10px);
+                    }
+                }
+
+                // cat li
+                &.sf-field-taxonomy-product_cat {
+                    @media (width <= 767px) {
+                        order: 3;
+                        width: 100%;
+                    }
+                }
+
+                // price
+                &.sf-field-post-meta-_price {
+                    @media (width <= 767px) {
+                        order: 2;
+                        width: calc(50% - 10px);
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+                    margin: 15px 0 0;
+
+                    @media (width <= 1270px) {
+                        margin: -8px 0 0;
+                    }
+
+                    li {
+                        max-width: 300px;
+                        display: flex;
+                        align-items: flex-start;
+
+                        &.sf-item-179 {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
 .woocommerce-no-products-found {
-  max-width: 992px;
-  width: 100%;
-  margin-left: auto;
-  min-height: 520px;
+    max-width: 992px;
+    width: 100%;
+    margin-left: auto;
+    min-height: 520px;
 
-  @media(max-width: 991px) {
-    min-height: 150px;
-  }
+    @media (width <= 991px) {
+        min-height: 150px;
+    }
 
-  .woocommerce-info {
-    @extend .h3;
-  }
+    .woocommerce-info {
+        @extend .h3;
+    }
 }
 
 .searchandfilter .noUi-connect {
-  background-color: $theme-color2;
+    background-color: $theme-color2;
 }

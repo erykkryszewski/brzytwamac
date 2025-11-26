@@ -66,11 +66,11 @@ if ($orphans == "true") {
             </div>
             <div class="container">
                 <nav class="nav <?php if (!is_front_page()) { echo 'nav--subpage';} ?>">
-                    <a href="/" class="nav__logo <?php if (!is_front_page()) { echo 'nav__logo--subpage'; } ?>">
+                    <a href="/" class="nav__logo <?php if (!is_front_page()) { echo 'nav__logo--subpage'; } else { echo 'nav__logo--homepage'; } ?>">
                         <?php if (!empty($global_logo)) { echo wp_get_attachment_image($global_logo, 'medium', '', ['class' => '']); } else { echo 'Logo'; } ?>
                     </a>
-                    <div class="nav__content <?php if (!is_front_page()) { echo 'nav__content--subpage'; } ?>">
-                        <?php $menu_class = is_front_page() ? 'nav__menu' : 'nav__menu nav__menu--subpage'; echo wp_nav_menu(['theme_location' => 'Navigation', 'container' => 'ul', 'menu_class' => $menu_class]); ?> <?php if (is_woocommerce_activated()): ?>
+                    <div class="nav__content <?php if (!is_front_page()) { echo 'nav__content--subpage'; } else { echo 'nav__content--homepage'; }?>">
+                        <?php $menu_class = is_front_page() ? 'nav__menu nav__menu--homepage' : 'nav__menu nav__menu--subpage'; echo wp_nav_menu(['theme_location' => 'Navigation', 'container' => 'ul', 'menu_class' => $menu_class]); ?> <?php if (is_woocommerce_activated()): ?>
                         <div class="nav__shop-elements <?php if (!is_front_page()) { echo 'nav__shop-elements--subpage'; } ?>">
                             <a class="nav__cart-icon <?php if (!is_front_page()) { echo 'nav__cart-icon--subpage'; } ?>" href="/koszyk">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -94,7 +94,10 @@ if ($orphans == "true") {
                             </a>
                         </div>
                         <?php endif; ?> <?php if (!empty($header_button)): ?>
-                        <a href="<?php echo esc_html($header_button['url']); ?>" class="button nav__button <?php if (!is_front_page()) { echo 'nav__button--subpage'; } ?>" target="<?php echo esc_html($header_button['target']); ?>">
+                        <a href="<?php echo esc_html($header_button['url']); ?>"
+                            class="button nav__button <?php if (!is_front_page()) { echo 'nav__button--subpage'; } else { echo 'nav__button--homepage'; } ?>"
+                            target="<?php echo esc_html($header_button['target']); ?>"
+                        >
                             <?php if (!empty($header_button_before_icon)): ?>
                             <span class="button__icon button__icon--before"><?php echo wp_get_attachment_image($header_button_before_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?></span>
                             <?php endif; ?> <?php echo esc_html($header_button['title']); ?> <?php if (!empty($header_button_after_icon)): ?>

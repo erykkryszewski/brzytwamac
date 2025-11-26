@@ -30,7 +30,7 @@ $hero_cta_button = get_field("hero_cta_button");
                 </div>
                 <?php elseif (!empty($item['image'])): ?>
                 <div class="cta-hero__image <?php if (!empty($item['button_link'])) { echo 'cta-hero__image--animated'; } ?>">
-                    <?php echo wp_get_attachment_image($item['image'], 'full', '', ['class' => 'object-fit-cover']); ?> <?php if ('true' == $item['overlay']): ?>
+                    <?php echo wp_get_attachment_image($item['image'], 'large', '', ['class' => 'object-fit-cover']); ?> <?php if ('true' == $item['overlay']): ?>
                     <div class="cta-hero__overlay"></div>
                     <?php endif; ?>
                 </div>

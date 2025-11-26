@@ -35,6 +35,10 @@
                 filter: none;
             }
         }
+
+        &--homepage {
+            display: none;
+        }
     }
 
     &__content {
@@ -43,6 +47,10 @@
         align-items: center;
         justify-content: flex-end;
         padding: 10px 0;
+
+        &--homepage {
+            justify-content: center;
+        }
     }
 
     &__social-media {
@@ -107,6 +115,10 @@
         @media (width <= 599px) {
             display: none;
         }
+
+        &--homepage {
+            display: none;
+        }
     }
 
     &__menu {
@@ -114,6 +126,10 @@
         display: flex;
         justify-content: flex-end;
         gap: 10px;
+
+        &--homepage {
+            justify-content: center;
+        }
 
         @media (width >= 1200px) {
             transition: all 350ms ease-in-out;

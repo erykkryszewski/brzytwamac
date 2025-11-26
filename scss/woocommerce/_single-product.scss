@@ -5,11 +5,10 @@
     .woocommerce-message,
     .woocommerce-error {
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+        flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        margin: 40px 0 40px;
+        margin: 40px 0;
         background-color: $very-light-gray;
         color: $text-color;
         clear: both;
@@ -20,7 +19,7 @@
         border-radius: $theme-border-radius;
         font-weight: 600;
 
-        @media (max-width: 991px) {
+        @media (width <= 991px) {
             text-align: center;
         }
 
@@ -56,13 +55,12 @@
             align-items: center;
             justify-content: center;
 
-            @media (max-width: 991px) {
+            @media (width <= 991px) {
                 gap: 5px;
-                flex-wrap: wrap;
-                flex-direction: column;
+                flex-flow: column wrap;
             }
 
-            @media (max-width: 340px) {
+            @media (width <= 340px) {
                 gap: 5px;
                 flex-direction: column;
             }
@@ -75,7 +73,7 @@
         position: relative;
         z-index: 1;
 
-        @media (max-width: 1199px) {
+        @media (width <= 1199px) {
             padding: 80px 15px 0;
             text-align: left;
         }
@@ -83,7 +81,7 @@
         .woocommerce-breadcrumb {
             margin: 80px 0 40px;
 
-            @media (max-width: 1199px) {
+            @media (width <= 1199px) {
                 margin: 0 0 40px;
             }
         }
@@ -199,7 +197,7 @@
                     padding: 0 0 0 20px;
                     position: relative;
 
-                    &:before {
+                    &::before {
                         content: "•";
                         display: block;
                         margin: 0;
@@ -243,11 +241,11 @@
                 border-radius: $theme-border-radius;
                 border-top-left-radius: $theme-border-radius;
 
-                @media (max-width: 767px) {
+                @media (width <= 767px) {
                     max-width: 750px;
                 }
 
-                @media (max-width: 500px) {
+                @media (width <= 500px) {
                     height: 350px;
                 }
 
@@ -255,10 +253,7 @@
                     width: 100%;
                     height: 100%;
                     position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    top: 0;
+                    inset: 0;
                     z-index: 1;
                     display: flex;
                     margin: 0;
@@ -269,7 +264,7 @@
                     border: 1px solid $light-gray;
                     border-radius: $theme-border-radius;
 
-                    &:before {
+                    &::before {
                         content: "";
                         display: block;
                         width: 31px;
@@ -327,7 +322,7 @@
                 max-width: 122px;
                 display: none;
                 border: 1px solid $light-gray;
-                border-radius: 15px;
+                border-radius: 0;
                 overflow: hidden;
 
                 &:first-of-type,
@@ -354,7 +349,7 @@
             @extend .h3;
             text-align: left;
 
-            @media (max-width: 991px) {
+            @media (width <= 991px) {
                 margin: 30px 0 0;
             }
         }
@@ -390,7 +385,7 @@
                     margin: 5px 0 0;
                     text-align: left;
 
-                    &:before {
+                    &::before {
                         content: "•";
                         margin: 0 8px 0 0;
                         display: inline-block;
@@ -435,7 +430,7 @@
 
                 > input {
                     min-width: 75px;
-                    border-radius: 20px !important;
+                    border-radius: 0;
                 }
 
                 /* woo better usabillity plugin */
@@ -467,7 +462,7 @@
                 align-items: flex-start;
                 justify-content: flex-start;
 
-                @media (max-width: 991px) {
+                @media (width <= 991px) {
                     display: flex;
                     align-items: flex-start;
                     justify-content: flex-start;
@@ -475,7 +470,7 @@
             }
 
             > div {
-                @media (max-width: 767px) {
+                @media (width <= 767px) {
                     margin: 20px 0 0;
                 }
 
@@ -560,7 +555,7 @@
         .products.columns-4 {
             margin: 10px -15px 0;
 
-            @media (max-width: 767px) {
+            @media (width <= 767px) {
                 margin: 40px -15px 0;
             }
         }
@@ -568,15 +563,15 @@
         .product__image {
             height: 420px;
 
-            @media (max-width: 767px) {
+            @media (width <= 767px) {
                 height: 290px;
             }
 
-            @media (max-width: 575px) {
+            @media (width <= 575px) {
                 height: 500px;
             }
 
-            @media (max-width: 490px) {
+            @media (width <= 490px) {
                 height: 400px;
             }
         }

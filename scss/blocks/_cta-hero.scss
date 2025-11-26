@@ -2,7 +2,6 @@
     width: 100%;
     text-align: left;
     position: relative;
-    margin: 0 0 -215px;
 
     &--background {
         background: $very-light-gray;
@@ -101,7 +100,7 @@
     }
 
     &__content {
-        height: 700px;
+        height: 650px;
         width: 100%;
         position: relative;
         padding: 45px;
@@ -111,9 +110,10 @@
         justify-content: center;
         z-index: 1;
         text-align: center;
+        margin: 0 auto;
 
         &--full {
-            padding: 45px 0;
+            padding: 90px 0 45px;
 
             @media (width <= 767px) {
                 padding: 25px 0;
@@ -140,7 +140,8 @@
 
     &__logo {
         width: 100%;
-        max-width: 400px;
+        max-width: 270px;
+        margin: 0 auto 30px;
 
         img,
         svg {
@@ -159,10 +160,6 @@
     &__subtitle,
     &__content > p {
         color: $white;
-    }
-
-    &__title {
-        text-transform: uppercase;
     }
 
     &__button {
