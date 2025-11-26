@@ -41,7 +41,6 @@ $footer_third_column_content = get_field("footer_third_column_content", "options
                                 <a href="mailto:<?php echo esc_html($global_email);?>" class="footer__email">Email: <?php echo esc_html($global_email);?></a>
                                 <?php endif;?> <?php if(!empty($global_address)):?>
                                 <div class="footer__address">
-                                    <span>Adres</span>
                                     <?php echo apply_filters('acf_the_content', $global_address);?>
                                 </div>
                                 <?php endif;?> <?php if(!empty($global_social_media)):?>
