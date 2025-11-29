@@ -69,7 +69,7 @@ $footer_third_column_content = get_field("footer_third_column_content", "options
                     <div class="bottom-bar__wrapper">
                         <p>
                             <?php _e('Copyright', 'ercodingtheme');?>
-                            © <?php echo date("Y"); ?>&nbsp;<?php _e('Ercoding', 'ercodingtheme');?>
+                            © <?php echo date("Y"); ?>&nbsp;<?php _e('Brzytwa Mać', 'ercodingtheme');?>
                         </p>
                         <p>
                             Strona stworzona przez

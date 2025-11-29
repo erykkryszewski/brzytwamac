@@ -22,11 +22,10 @@ $global_logo = get_field("global_logo", "options"); ?>
         <div class="subpage-hero__background subpage-hero__background--plain"></div>
         <div class="container">
             <div class="subpage-hero__wrapper">
-                <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Blog'); ?></h1>
+                <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Strefa wiedzy'); ?></h1>
             </div>
         </div>
     </div>
-    <div class="spacer" style="height: 90px"></div>
     <div class="section-title">
         <div class="container">
             <div class="section-title__wrapper section-title__wrapper--decorated">
@@ -68,7 +67,7 @@ $global_logo = get_field("global_logo", "options"); ?>
     </div>
     <?php endif; ?>
     <div class="spacer spacer--small" style="height: 40px"></div>
-    <div class="cta">
+    <div class="cta cta--subpage">
         <div class="container">
             <div class="cta__wrapper">
                 <h2 class="cta__title">Zapoznaj się z naszą ofertą!</h2>
