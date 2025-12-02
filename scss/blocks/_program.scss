@@ -43,9 +43,10 @@
     }
 
     &__title {
-        font-size: 16px;
+        @extend .h4;
         padding: 0 20px;
         text-align: center;
+        margin: 0 0 15px;
     }
 
     &__date {

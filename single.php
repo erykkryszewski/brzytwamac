@@ -57,7 +57,7 @@ $author_position = get_field("author_position", $page_id);
           <div class="subpage-hero__background subpage-hero__background--plain"></div>
           <div class="container">
             <div class="subpage-hero__wrapper">
-              <h1 class="subpage-hero__title subpage-hero__title--white"><?php echo apply_filters('the_title', 'Blog');?></h1>
+              <h1 class="subpage-hero__title subpage-hero__title--white"><?php echo apply_filters('the_title', 'Strefa wiedzy');?></h1>
             </div>
           </div>
         </div>

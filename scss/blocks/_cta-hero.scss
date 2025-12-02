@@ -84,10 +84,10 @@
         background: linear-gradient(
             61deg,
             rgb(0 0 0) 0%,
-            rgb(0 0 0 / 80%) 23%,
-            rgb(0 0 0 / 70%) 48%,
-            rgb(0 0 0 / 50%) 89%,
-            rgb(0 0 0 / 80%) 100%
+            rgb(0 0 0 / 85%) 23%,
+            rgb(0 0 0 / 80%) 48%,
+            rgb(0 0 0 / 70%) 89%,
+            rgb(0 0 0 / 88%) 100%
         );
     }
 
@@ -164,8 +164,9 @@
 
     &__button {
         margin: 30px 0 0;
-        background: transparent;
         border: 2px solid $white;
+        background: $white;
+        color: $theme-color;
 
         &:hover {
             border: 2px solid $white;

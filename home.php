@@ -41,7 +41,7 @@ $global_logo = get_field("global_logo", "options"); ?>
             <div class="theme-blog__wrapper">
                 <div class="row">
                     <?php while (have_posts()): ?> <?php the_post(); ?>
-                    <div class="col-12 col-md-6 col-lg-4 theme-blog__column">
+                    <div class="col-12 col-md-6 theme-blog__column">
                         <div class="theme-blog__item">
                             <div class="theme-blog__image">
                                 <a href="<?php the_permalink(); ?>" class="cover"></a>
@@ -52,7 +52,7 @@ $global_logo = get_field("global_logo", "options"); ?>
                                     <a href="<?php the_permalink(); ?>" class="theme-blog__title"><?php the_title(); ?></a>
                                     <p><?php $excerpt = get_the_excerpt(); if (empty($excerpt)) { echo substr(get_content_excerpt(), 0, 150) . '...'; } else { echo substr($excerpt, 0, 150) . '...'; } ?></p>
                                 </div>
-                                <a href="<?php the_permalink(); ?>" class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
+                                <a href="<?php the_permalink(); ?>" class="theme-blog__button button button--small"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -67,13 +67,14 @@ $global_logo = get_field("global_logo", "options"); ?>
     </div>
     <?php endif; ?>
     <div class="spacer spacer--small" style="height: 40px"></div>
-    <div class="cta cta--subpage">
+    <div class="cta cta--background cta--subpage">
+        <div class="cta__background cta__background--overlay"></div>
         <div class="container">
             <div class="cta__wrapper">
-                <h2 class="cta__title">Zapoznaj się z naszą ofertą!</h2>
-                <p></p>
+                <h2 class="cta__title">Umów się na wizytę</h2>
+                <p>Mamy lokal w Katowicach oraz w Sosnowcu!</p>
                 <div>
-                    <a href="/kontakt/" class="cta__button button">Skontaktuj się</a>
+                    <a href="https://booksy.com/pl-pl/98396_brzytwa-mac-katowice_barber-shop_11597_katowice?do=invite" class="cta__button button" target="blank">Umów wizytę</a>
                 </div>
             </div>
         </div>

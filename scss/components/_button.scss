@@ -11,7 +11,7 @@
     color: $white;
     transition: all 300ms ease;
     border-radius: $theme-border-radius !important;
-    white-space: nowrap;
+    white-space: initial;
     flex-shrink: 0;
     text-align: center;
     min-width: 120px;
@@ -52,6 +52,11 @@
         svg {
             filter: brightness(0) invert(1);
         }
+    }
+
+    &--small {
+        padding: 8px 20px;
+        font-size: 15px;
     }
 
     &--checkout,

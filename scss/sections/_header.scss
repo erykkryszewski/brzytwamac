@@ -1,6 +1,6 @@
 .header {
     z-index: 20;
-    position: fixed;
+    position: absolute;
     width: 100%;
     left: 0;
     right: 0;
@@ -11,16 +11,16 @@
     /* temporary styles */
     background: transparent;
 
-    &--fixed {
-        box-shadow: 0 0 19px -10px rgba($dark, 0.7);
-        background: $white;
-        min-height: 70px;
-        top: -45px;
+    // &--fixed {
+    //     box-shadow: 0 0 19px -10px rgba($dark, 0.7);
+    //     background: $white;
+    //     min-height: 70px;
+    //     top: -45px;
 
-        @media (width <= 991px) {
-            top: -75px;
-        }
-    }
+    //     @media (width <= 991px) {
+    //         top: -75px;
+    //     }
+    // }
 
     // &--open {
     //   background: rgba($dark, 0.85);
@@ -33,7 +33,7 @@
 
 body.admin-bar {
     .header {
-        top: 32px;
+        top: 0;
 
         &--fixed {
             top: -13px;

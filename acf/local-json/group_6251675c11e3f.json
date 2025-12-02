@@ -21,10 +21,11 @@
             "max": 0,
             "layout": "table",
             "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_6251679f64c97",
-                    "label": "Day",
+                    "label": "Usługa",
                     "name": "day",
                     "aria-label": "",
                     "type": "text",
@@ -37,19 +38,19 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": "",
                     "parent_repeater": "field_6251678864c96"
                 },
                 {
                     "key": "field_62535bf5e887a",
-                    "label": "Day ID",
+                    "label": "ID usługi",
                     "name": "day_id",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "ID dnia musi być bez polskich znaków",
+                    "instructions": "ID dnia musi być bez polskich znaków, to służy tylko do przełączania zakładek",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -58,34 +59,15 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": "",
-                    "parent_repeater": "field_6251678864c96"
-                },
-                {
-                    "key": "field_625167a964c98",
-                    "label": "Date",
-                    "name": "date",
-                    "aria-label": "",
-                    "type": "date_picker",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "10",
-                        "class": "",
-                        "id": ""
-                    },
-                    "display_format": "m\/d\/Y",
-                    "return_format": "m\/d\/Y",
-                    "first_day": 1,
                     "parent_repeater": "field_6251678864c96"
                 },
                 {
                     "key": "field_625167f764c9a",
-                    "label": "Timeline",
+                    "label": "Lista",
                     "name": "timeline",
                     "aria-label": "",
                     "type": "repeater",
@@ -97,20 +79,21 @@
                         "class": "",
                         "id": ""
                     },
-                    "collapsed": "",
+                    "layout": "table",
                     "min": 0,
                     "max": 0,
-                    "layout": "table",
+                    "collapsed": "",
                     "button_label": "Add Row",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_6251681064c9b",
-                            "label": "Time",
+                            "label": "Mały tytuł nad usługą",
                             "name": "time",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -118,15 +101,15 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": "",
                             "parent_repeater": "field_625167f764c9a"
                         },
                         {
                             "key": "field_6251685964c9c",
-                            "label": "Title",
+                            "label": "Tytuł i cena",
                             "name": "title",
                             "aria-label": "",
                             "type": "textarea",
@@ -139,9 +122,9 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "",
                             "maxlength": "",
                             "rows": 2,
+                            "placeholder": "Strzyżenie: <span>100 zł<\/span>",
                             "new_lines": "br",
                             "parent_repeater": "field_625167f764c9a"
                         },
@@ -167,11 +150,9 @@
                             "parent_repeater": "field_625167f764c9a"
                         }
                     ],
-                    "rows_per_page": 20,
                     "parent_repeater": "field_6251678864c96"
                 }
-            ],
-            "rows_per_page": 20
+            ]
         }
     ],
     "location": [
@@ -192,5 +173,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679843074
+    "modified": 1764682956
 }

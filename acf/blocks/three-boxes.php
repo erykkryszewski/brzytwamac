@@ -16,13 +16,12 @@ $boxes = get_field("boxes");
             <div class="col-sm-6 col-lg-4">
                 <div class="three-boxes__item">
                     <?php if (!empty($item['image'])): ?>
-                    <div class="three-boxes__image">
-                        <?php echo wp_get_attachment_image($item['image'], 'full', '', ['class' => 'object-fit-cover']); ?>
-                    </div>
+                    <div class="three-boxes__image"><?php echo wp_get_attachment_image($item['image'], 'full', '', ['class' => 'object-fit-cover']); ?></div>
                     <?php endif; ?> <?php if (!empty($item['content'])): ?>
                     <div class="three-boxes__content"><?php echo apply_filters('the_title', $item['content']); ?></div>
                     <?php endif; ?> <?php if (!empty($item['link'])): ?>
                     <a href="<?php echo esc_html($item['link']['url']); ?>" class="cover"></a>
+                    <a href="<?php echo esc_html($item['link']['url']); ?>" class="button button--small three-boxes__button"><?php echo esc_html($item['link']['title']); ?></a>
                     <?php endif; ?>
                 </div>
             </div>

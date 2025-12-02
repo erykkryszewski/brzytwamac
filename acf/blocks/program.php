@@ -20,13 +20,12 @@ $program = get_field("program");
             <?php foreach ($program as $key => $item): ?>
             <div class="program__item" id="<?php echo esc_html($item['day_id']); ?>">
                 <h3 class="program__title"><?php echo apply_filters('the_title', $item['day']); ?></h3>
-                <span class="program__date"><?php echo apply_filters('the_title', $item['date']); ?></span>
                 <?php if (!empty($item['timeline'])): ?>
                 <div class="program__timeline">
                     <?php foreach ($item['timeline'] as $key => $timeline): ?>
                     <div class="program__info">
-                        <span class="program__time"><?php echo esc_html($timeline['time']); ?></span>
-                        <span class="program__subtitle"><?php echo esc_html($timeline['title']); ?></span>
+                        <span class="program__time"><?php echo apply_filters('the_title', $timeline['time']); ?></span>
+                        <span class="program__subtitle"><?php echo apply_filters('the_title', $timeline['title']); ?></span>
                         <?php echo apply_filters('acf_the_content', str_replace('&nbsp;', ' ', $timeline['text'])); ?>
                     </div>
                     <?php endforeach; ?>
