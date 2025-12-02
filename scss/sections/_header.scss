@@ -29,6 +29,12 @@
     //     background: $dark;
     //   }
     // }
+
+    &--open {
+        @media (width <= 1199px) {
+            background: $white;
+        }
+    }
 }
 
 body.admin-bar {

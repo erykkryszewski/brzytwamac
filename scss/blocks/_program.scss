@@ -18,7 +18,10 @@
     }
 
     &__button {
-        min-width: 168px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        flex-shrink: initial;
 
         &.active {
             background: $light-gray;
