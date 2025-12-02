@@ -32,7 +32,7 @@
         margin: 20px 0 0;
 
         @extend .paragraph;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     &__details {
@@ -79,7 +79,7 @@
         display: flex;
 
         @extend .paragraph;
-        font-size: 15px;
+        font-size: 16px;
         margin: 0;
         gap: 8px;
         color: $text-color;
@@ -171,7 +171,7 @@
                     p,
                     label {
                         margin: 0;
-                        font-size: 15px;
+                        font-size: 16px;
                         color: $input-color;
 
                         a {
@@ -216,7 +216,7 @@
 
         .gform_confirmation_message {
             @extend .paragraph;
-            font-size: 15px;
+            font-size: 16px;
         }
     }
 }

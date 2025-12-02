@@ -31,7 +31,7 @@ if (is_string($pause_on_hover) && $pause_on_hover === "true") {
                     <div class="gallery__item">
                         <?php $full_image_src = ''; if (!empty($item['image'])) { $src_arr = wp_get_attachment_image_src($item['image'], 'full'); if (!empty($src_arr) && !empty($src_arr[0])) { $full_image_src = $src_arr[0]; } } ?> <?php if (!empty($item['image']) && !empty($full_image_src)): ?>
                         <a class="gallery__image <?php if ($full_width === 'true') { echo 'gallery__image--full-width'; } ?>" data-fancybox="gallery" href="<?php echo esc_url($full_image_src); ?>">
-                            <?php echo wp_get_attachment_image($item['image'], 'large', false, [ 'class' => 'object-fit-cover', 'alt' => 'galeria-' . ($key + 1), 'title' => 'galeria-' . ($key + 1), 'loading' => 'eager', 'decoding' => 'async', ]); ?>
+                            <?php echo wp_get_attachment_image($item['image'], 'full', false, [ 'class' => 'object-fit-cover', 'alt' => 'galeria-' . ($key + 1), 'title' => 'galeria-' . ($key + 1), 'loading' => 'eager', 'decoding' => 'async', ]); ?>
                         </a>
                         <?php endif; ?>
                     </div>

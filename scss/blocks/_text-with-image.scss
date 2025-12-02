@@ -16,6 +16,14 @@
 
         &--reverse {
             flex-direction: row-reverse;
+
+            @media (width <= 767px) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        @media (width <= 767px) {
+            flex-direction: column-reverse;
         }
     }
 
@@ -46,13 +54,22 @@
         }
 
         @media (width <= 767px) {
-            margin: 30px 0 0;
+            margin: 0 0 30px;
             height: 380px;
         }
     }
 
-    &__title {
-        color: $theme-color;
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $text-color;
+
+        em {
+            @extend .h2;
+            color: $theme-color;
+            font-style: normal;
+        }
     }
 
     &__subtitle {

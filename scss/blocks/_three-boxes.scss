@@ -10,7 +10,7 @@
     &__item {
         width: 100%;
         position: relative;
-        padding: 30px;
+        padding: 24px;
         background: $white;
         margin: 30px 0 0;
         border: 1px solid $light-gray;
@@ -24,6 +24,10 @@
                 border: 1px solid $very-light-gray;
             }
         }
+
+        @media (width <= 767px) {
+            padding: 10px;
+        }
     }
 
     &__image {
@@ -34,6 +38,10 @@
         height: 270px;
         background: $black;
         border: 1px solid $white;
+
+        img {
+            filter: contrast(1.05) saturate(1.05);
+        }
     }
 
     &__content {
@@ -52,7 +60,7 @@
         }
 
         p {
-            font-size: 15px;
+            font-size: 16px;
             margin: 15px 0 0;
         }
     }
